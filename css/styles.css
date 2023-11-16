@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo{
+    max-width: 12rem;
+    margin-left: 5px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #ceccec;
+}
+
+.listaMenu{
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.listaMenu li a{
+    text-decoration: none;
+    color: #1c1c1c;
+    font-size: 30px;
+    margin-right: 10px;
+
+
+}
+.btnMenu,
+.btnCerrar
+{
+    display: none;
+}
+
+
+@media screen and (max-width: 500px){
+    .btnMenu,
+    .btnCerrar{
+        font-size: 2.5rem;
+        cursor: pointer;
+        display: block;
+    }
+    .btnMenu{
+        margin-left: 20px;
+        background-color: transparent;
+        border-radius: 2px;
+        border: none;
+    }
+    .btnCerrar{
+        border: none;
+        background-color: transparent;
+        color: white;
+    }
+    .menuPrincipal{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.5rem;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35);
+    }
+    .menuPrincipal.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .listaMenu{
+        font-size: 12px;
+        flex-direction: column;
+        align-items:end;
+    }
+    .listaMenu li a {
+        color: #ceccec;
+    }
+}
